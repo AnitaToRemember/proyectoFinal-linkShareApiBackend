@@ -29,17 +29,6 @@ const selectAllLinkPostsModel = async (keyword = '', userId = '') => {
     [userId, userId, `%${keyword}%`, `%${keyword}%`, `%${keyword}%`]
         );
 
-            for (const link of links) {
-            // stating "votedByMe" y "owner" as boolean
-            link.votedByMe = Boolean(link.votedByMe);
-            link.owner = Boolean(link.owner);
-    
-            // The average of votes is a value of type String. We convert it to Number.
-            link.votes = Number(link.votes);
-            }
-    
-            return links;
-
     } finally {
         if (connection) connection.release();
     }
