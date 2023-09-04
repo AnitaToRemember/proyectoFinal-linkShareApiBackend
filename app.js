@@ -10,7 +10,6 @@ const fileUpload = require('express-fileupload');
 const app = express();
 
 // Temporary storage for shared links
-let links = [];
 app.use(cors());
 app.use(bodyParser.json());
 
