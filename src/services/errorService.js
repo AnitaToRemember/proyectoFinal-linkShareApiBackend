@@ -47,11 +47,11 @@ module.exports = {
         };
     },
 
-    notFoundError(resource) {
+    notFoundError() {
         throw {
             httpStatus: 404, // Not Found
             code: 'RESOURCE_NOT_FOUND',
-            message: `The required resource '${resource}' does not exist`,
+            message: `The required resource does not exist`,
         };
     },
 
