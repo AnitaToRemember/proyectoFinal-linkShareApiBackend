@@ -11,6 +11,7 @@ const sendRecoverPassController =  async(req, res, next) => {
         const { email } = req.body;
 
         await updateRecoveryPassCodeModel(email, recoverPassCode, next);
+        
         sendEmail(email, recoverPassCode, next);
 
         res.status(201).json({

@@ -15,6 +15,11 @@ const updateRecoveryPassCodeModel = async (email, recoverPassCode, next) => {
             `SELECT email FROM users WHERE email = ?`,
             [email]
         );
+        console.log(users);
+
+        if (users.length === 0) {
+            invalidCredentialsError();
+        }
 
         email = users[0].email;
 
@@ -26,11 +31,6 @@ const updateRecoveryPassCodeModel = async (email, recoverPassCode, next) => {
             recoverPassCode,
             email,
         ]);
-    } catch (err) {
-        
-        await connection.rollback();
-
-        next(err); 
     } finally {
         if (connection) connection.release();
     }
