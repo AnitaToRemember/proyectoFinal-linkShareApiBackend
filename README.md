@@ -32,18 +32,18 @@
 5. When using `Postman` keep in mind that, in order to be able to change the password with the recovery code, you need to register with a real and fucntioning email to be able to receive the temporary code that allows you to change passwords.
 
 ## Users Endpoints
-- **POST** - [`/users/register`] -  create a new user - Eve ✅
-- **POST**  - [`/users/login`]  - login - Eve ✅
-- **GET** - [`/users`] - see profile ➡️ `Token`- ✅ karol 
-- **PUT**  - [`/users/avatar`] - add an avatar ➡️ `Token`  ** ✅ 
-- **PUT** - [`/users/password`] - change password ➡️ `Token` - karol ✅
-- **POST** - [`/users/password/recover`] - send an password recovery email - Eve ✅
-- **PUT** - [`/users/password/reset`] - to update the password with a recovery code - Eve ✅
+- **POST** - [`/users/register`] -  create a new user
+- **POST**  - [`/users/login`]  - login
+- **GET** - [`/users`] - see profile ➡️ `Token`- 
+- **PUT**  - [`/users/avatar`] - add an avatar ➡️ `Token` 
+- **PUT** - [`/users/password`] - change password ➡️ `Token`
+- **POST** - [`/users/password/recover`] - send an password recovery email
+- **PUT** - [`/users/password/reset`] - to update the password with a recovery code
 
 
 ## APP endpoints
-- **POST** - [`/links`] - create a post (URL, title, description) ➡️ `Token` - Ana ✅
-- **GET** - [`/links`] - see list of posted links (including previous days) - Ana ✅
-- **GET**  - [`/links/:linkId`] -  see a specific post - Ana ✅
-- **DELETE** - [`/links/:linkId] - erase previous posts created by user - Ana ✅
-- **POST** - [`/links/:linkId/votes`] - vote a post - Ana ✅
+- **POST** - [`/links`] - create a post (URL, title, description) ➡️ `Token`
+- **GET** - [`/links`] - see list of posted links (including previous days)
+- **GET**  - [`/links/:linkId`] -  see a specific post
+- **DELETE** - [`/links/:linkId] - erase previous posts created by user
+- **POST** - [`/links/:linkId/votes`] - vote a post
