@@ -15,7 +15,6 @@ const updateRecoveryPassCodeModel = async (email, recoverPassCode, next) => {
             `SELECT email FROM users WHERE email = ?`,
             [email]
         );
-        console.log(users);
 
         if (users.length === 0) {
             invalidCredentialsError();

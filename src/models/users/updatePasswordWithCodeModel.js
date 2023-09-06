@@ -22,8 +22,7 @@ const updatePasswordWithCodeModel = async (email, code, password, next) => {
         }
 
         const recoverPassCode = users[0].recoverPassCode
-        console.log(recoverPassCode);
-        console.log(code);
+    
         if (!recoverPassCode || recoverPassCode !== code) {
             recoveryNotMatchError();
         }
